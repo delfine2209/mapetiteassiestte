@@ -1,12 +1,1 @@
-Accueil.html>
-<div class="screen">
-  <h1>MA PETITE ASSIETTE</h1>
-  <h2>Des petites portions, mais un vrai repas.</h2>
-  <p>Des idées gourmandes adaptées à votre appétit et à vos envies.</p>
 
-  <div class="card">Adapté à votre appétit</div>
-  <div class="card">De vraies recettes</div>
-  <div class="card">Sans impression de privation</div>
-
-  <a class="button" href="MesEnvies.html">TROUVER MON REPAS</a>
-</div>
