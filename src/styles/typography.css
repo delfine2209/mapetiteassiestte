@@ -1,18 +1,14 @@
-body {
-  font-family: 'Nunito', sans-serif;
-  color: var(--brown);
-  background-color: var(--cream);
-  font-size: 16px;
-}
 h1 {
   font-size: 28px;
-  font-weight: 700;
-}
-h2 {
-  font-size: 20px;
-  font-weight: 600;
+  font-weight: bold;
 }
 p {
   font-size: 18px;
 }
-
+.card {
+  font-size: 18px;
+}
+.button {
+  font-size: 18px;
+  font-weight: bold;
+}
