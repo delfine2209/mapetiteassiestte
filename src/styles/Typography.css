@@ -1,1 +1,18 @@
+body {
+  font-family: 'Nunito', sans-serif;
+  color: var(--brown);
+  background-color: var(--cream);
+  font-size: 16px;
+}
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+}
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+p {
+  font-size: 18px;
+}
 
