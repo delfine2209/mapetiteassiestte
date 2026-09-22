@@ -1,19 +1,20 @@
+:root {
+  --beige: #f7f2ec;
+  --text: #4a2e2a;
+  --card-bg: #ffffff;
+  --button-bg: #d46a4a;
+  --button-text: #ffffff;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
 body {
-  background: #f7f2ec;
-  color: #4a2e2a;
+  background: var(--beige);
+  color: var(--text);
 }
 .card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 16px;
-  margin: 12px 0;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: var(--card-bg);
+  box-shadow: 0 2px 6px var(--shadow);
 }
 .button {
-  background: #d46a4a;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  display: inline-block;
+  background: var(--button-bg);
+  color: var(--button-text);
 }
