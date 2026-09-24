@@ -1,1 +1,20 @@
-
+{
+  "id": "REC001",
+  "nom": "Poulet courgettes",
+  "categorie": "Viande",
+  "temps": 30,
+  "proteines": 28,
+  "petit_appetit": true,
+  "pre_operatoire": true,
+  "post_operatoire": true,
+  "vegetarien": false,
+  "vegetalien": false,
+  "sans_gluten": true,
+  "sans_lactose": true,
+  "envies": [
+    "protéiné",
+    "léger",
+    "familial",
+    "rapide"
+  ]
+}
