@@ -1,12 +1,191 @@
-<div class="screen">
-  <h1>Mes envies</h1>
-  <p>Qu’est-ce qui vous ferait plaisir aujourd’hui ?</p>
+```html
+<!DOCTYPE html>
+<html lang="fr">
 
-  <div class="card">Plat réconfortant</div>
-  <div class="card">Frais & léger</div>
-  <div class="card">Plat familial</div>
-  <div class="card">Végétarien</div>
-  <div class="card">Une petite douceur</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <a class="button" href="MaFaim.html">SUIVANT</a>
-</div>
+  <title>Mes envies - Ma Petite Assiette</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="screen">
+
+    <!-- EN-TÊTE -->
+    <header class="page-header">
+
+      <h1>Mes envies</h1>
+
+      <p class="page-subtitle">
+        Qu'est-ce qui vous ferait plaisir aujourd'hui ?
+      </p>
+
+    </header>
+
+
+    <!-- CONTENU -->
+    <main class="envies-content">
+
+      <!-- ÉTAPE 1 -->
+      <section class="envie-section">
+
+        <h2>🍽️ J'ai envie de...</h2>
+
+        <div class="choice-grid">
+
+          <button class="choice-card">
+            <span class="choice-icon">🥗</span>
+            <span class="choice-title">Léger</span>
+            <span class="choice-text">Frais et équilibré</span>
+          </button>
+
+          <button class="choice-card">
+            <span class="choice-icon">🍝</span>
+            <span class="choice-title">Un plat complet</span>
+            <span class="choice-text">Petit mais rassasiant</span>
+          </button>
+
+          <button class="choice-card">
+            <span class="choice-icon">🥪</span>
+            <span class="choice-title">Rapide</span>
+            <span class="choice-text">Simple et sans prise de tête</span>
+          </button>
+
+          <button class="choice-card">
+            <span class="choice-icon">🍰</span>
+            <span class="choice-title">Sucré</span>
+            <span class="choice-text">Une petite douceur</span>
+          </button>
+
+          <button class="choice-card">
+            <span class="choice-icon">❤️</span>
+            <span class="choice-title">Réconfortant</span>
+            <span class="choice-text">Un repas qui fait du bien</span>
+          </button>
+
+          <button class="choice-card">
+            <span class="choice-icon">🌱</span>
+            <span class="choice-title">Végétarien</span>
+            <span class="choice-text">Sans viande ni poisson</span>
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- ÉTAPE 2 -->
+      <section class="envie-section">
+
+        <h2>⏱️ J'ai combien de temps ?</h2>
+
+        <div class="time-options">
+
+          <button class="time-card">
+            <span>⚡</span>
+            <strong>10 min</strong>
+          </button>
+
+          <button class="time-card">
+            <span>⏱️</span>
+            <strong>20 min</strong>
+          </button>
+
+          <button class="time-card">
+            <span>🍳</span>
+            <strong>30 min</strong>
+          </button>
+
+          <button class="time-card">
+            <span>👩‍🍳</span>
+            <strong>J'ai le temps</strong>
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- ÉTAPE 3 -->
+      <section class="envie-section">
+
+        <h2>💛 Aujourd'hui, je recherche...</h2>
+
+        <div class="preferences">
+
+          <label class="check-option">
+            <input type="checkbox">
+            <span>Une petite portion</span>
+          </label>
+
+          <label class="check-option">
+            <input type="checkbox">
+            <span>Peu d'ingrédients</span>
+          </label>
+
+          <label class="check-option">
+            <input type="checkbox">
+            <span>Facile à digérer</span>
+          </label>
+
+          <label class="check-option">
+            <input type="checkbox">
+            <span>À préparer à l'avance</span>
+          </label>
+
+        </div>
+
+      </section>
+
+
+      <!-- BOUTON -->
+      <section class="search-section">
+
+        <a href="Recette.html" class="button button-main">
+          ✨ TROUVER MON REPAS
+        </a>
+
+      </section>
+
+    </main>
+
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+
+      <a href="Accueil.html" class="nav-item">
+        🏠
+        <span>Accueil</span>
+      </a>
+
+      <a href="MesEnvies.html" class="nav-item active">
+        🔍
+        <span>Envies</span>
+      </a>
+
+      <a href="Recette.html" class="nav-item">
+        🍽️
+        <span>Recettes</span>
+      </a>
+
+      <a href="Favoris.html" class="nav-item">
+        ⭐
+        <span>Favoris</span>
+      </a>
+
+      <a href="MonProfil.html" class="nav-item">
+        👤
+        <span>Profil</span>
+      </a>
+
+    </nav>
+
+  </div>
+
+</body>
+</html>
+```
