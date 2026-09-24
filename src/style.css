@@ -499,5 +499,22 @@ a {
   }
 }
 ```
+```css
+/* =========================================
+   SÉLECTION DANS MES ENVIES
+========================================= */
+
+.choice-card,
+.time-card {
+  transition: 0.2s ease;
+}
+
+.choice-card.selected,
+.time-card.selected {
+  transform: scale(1.03);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+  font-weight: bold;
+}
+```
 
 ```
