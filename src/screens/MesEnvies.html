@@ -13,179 +13,299 @@
 
 <body>
 
-  <div class="screen">
+<div class="screen">
 
-    <!-- EN-TÊTE -->
-    <header class="page-header">
+  <header class="page-header">
 
-      <h1>Mes envies</h1>
+    <h1>Mes envies</h1>
 
-      <p class="page-subtitle">
-        Qu'est-ce qui vous ferait plaisir aujourd'hui ?
-      </p>
+    <p class="page-subtitle">
+      Qu'est-ce qui vous ferait plaisir aujourd'hui ?
+    </p>
 
-    </header>
-
-
-    <!-- CONTENU -->
-    <main class="envies-content">
-
-      <!-- ÉTAPE 1 -->
-      <section class="envie-section">
-
-        <h2>🍽️ J'ai envie de...</h2>
-
-        <div class="choice-grid">
-
-          <button class="choice-card">
-            <span class="choice-icon">🥗</span>
-            <span class="choice-title">Léger</span>
-            <span class="choice-text">Frais et équilibré</span>
-          </button>
-
-          <button class="choice-card">
-            <span class="choice-icon">🍝</span>
-            <span class="choice-title">Un plat complet</span>
-            <span class="choice-text">Petit mais rassasiant</span>
-          </button>
-
-          <button class="choice-card">
-            <span class="choice-icon">🥪</span>
-            <span class="choice-title">Rapide</span>
-            <span class="choice-text">Simple et sans prise de tête</span>
-          </button>
-
-          <button class="choice-card">
-            <span class="choice-icon">🍰</span>
-            <span class="choice-title">Sucré</span>
-            <span class="choice-text">Une petite douceur</span>
-          </button>
-
-          <button class="choice-card">
-            <span class="choice-icon">❤️</span>
-            <span class="choice-title">Réconfortant</span>
-            <span class="choice-text">Un repas qui fait du bien</span>
-          </button>
-
-          <button class="choice-card">
-            <span class="choice-icon">🌱</span>
-            <span class="choice-title">Végétarien</span>
-            <span class="choice-text">Sans viande ni poisson</span>
-          </button>
-
-        </div>
-
-      </section>
+  </header>
 
 
-      <!-- ÉTAPE 2 -->
-      <section class="envie-section">
+  <main class="envies-content">
 
-        <h2>⏱️ J'ai combien de temps ?</h2>
+    <!-- =========================
+         ENVIE
+    ========================== -->
 
-        <div class="time-options">
+    <section class="envie-section">
 
-          <button class="time-card">
-            <span>⚡</span>
-            <strong>10 min</strong>
-          </button>
+      <h2>🍽️ J'ai envie de...</h2>
 
-          <button class="time-card">
-            <span>⏱️</span>
-            <strong>20 min</strong>
-          </button>
+      <div class="choice-grid">
 
-          <button class="time-card">
-            <span>🍳</span>
-            <strong>30 min</strong>
-          </button>
+        <button class="choice-card" data-envie="leger">
+          <span class="choice-icon">🥗</span>
+          <span class="choice-title">Léger</span>
+          <span class="choice-text">Frais et équilibré</span>
+        </button>
 
-          <button class="time-card">
-            <span>👩‍🍳</span>
-            <strong>J'ai le temps</strong>
-          </button>
+        <button class="choice-card" data-envie="complet">
+          <span class="choice-icon">🍝</span>
+          <span class="choice-title">Un plat complet</span>
+          <span class="choice-text">Petit mais rassasiant</span>
+        </button>
 
-        </div>
+        <button class="choice-card" data-envie="rapide">
+          <span class="choice-icon">🥪</span>
+          <span class="choice-title">Rapide</span>
+          <span class="choice-text">Simple et sans prise de tête</span>
+        </button>
 
-      </section>
+        <button class="choice-card" data-envie="sucre">
+          <span class="choice-icon">🍰</span>
+          <span class="choice-title">Sucré</span>
+          <span class="choice-text">Une petite douceur</span>
+        </button>
 
+        <button class="choice-card" data-envie="reconfort">
+          <span class="choice-icon">❤️</span>
+          <span class="choice-title">Réconfortant</span>
+          <span class="choice-text">Un repas qui fait du bien</span>
+        </button>
 
-      <!-- ÉTAPE 3 -->
-      <section class="envie-section">
+        <button class="choice-card" data-envie="vegetarien">
+          <span class="choice-icon">🌱</span>
+          <span class="choice-title">Végétarien</span>
+          <span class="choice-text">Sans viande ni poisson</span>
+        </button>
 
-        <h2>💛 Aujourd'hui, je recherche...</h2>
+      </div>
 
-        <div class="preferences">
-
-          <label class="check-option">
-            <input type="checkbox">
-            <span>Une petite portion</span>
-          </label>
-
-          <label class="check-option">
-            <input type="checkbox">
-            <span>Peu d'ingrédients</span>
-          </label>
-
-          <label class="check-option">
-            <input type="checkbox">
-            <span>Facile à digérer</span>
-          </label>
-
-          <label class="check-option">
-            <input type="checkbox">
-            <span>À préparer à l'avance</span>
-          </label>
-
-        </div>
-
-      </section>
+    </section>
 
 
-      <!-- BOUTON -->
-      <section class="search-section">
+    <!-- =========================
+         TEMPS
+    ========================== -->
 
-        <a href="Recette.html" class="button button-main">
-          ✨ TROUVER MON REPAS
-        </a>
+    <section class="envie-section">
 
-      </section>
+      <h2>⏱️ J'ai combien de temps ?</h2>
 
-    </main>
+      <div class="time-options">
+
+        <button class="time-card" data-temps="10">
+          <span>⚡</span>
+          <strong>10 min</strong>
+        </button>
+
+        <button class="time-card" data-temps="20">
+          <span>⏱️</span>
+          <strong>20 min</strong>
+        </button>
+
+        <button class="time-card" data-temps="30">
+          <span>🍳</span>
+          <strong>30 min</strong>
+        </button>
+
+        <button class="time-card" data-temps="plus">
+          <span>👩‍🍳</span>
+          <strong>J'ai le temps</strong>
+        </button>
+
+      </div>
+
+    </section>
 
 
-    <!-- NAVIGATION -->
-    <nav class="navbar">
+    <!-- =========================
+         PRÉFÉRENCES
+    ========================== -->
 
-      <a href="Accueil.html" class="nav-item">
-        🏠
-        <span>Accueil</span>
-      </a>
+    <section class="envie-section">
 
-      <a href="MesEnvies.html" class="nav-item active">
-        🔍
-        <span>Envies</span>
-      </a>
+      <h2>💛 Aujourd'hui, je recherche...</h2>
 
-      <a href="Recette.html" class="nav-item">
-        🍽️
-        <span>Recettes</span>
-      </a>
+      <div class="preferences">
 
-      <a href="Favoris.html" class="nav-item">
-        ⭐
-        <span>Favoris</span>
-      </a>
+        <label class="check-option">
+          <input type="checkbox" value="petite">
+          <span>Une petite portion</span>
+        </label>
 
-      <a href="MonProfil.html" class="nav-item">
-        👤
-        <span>Profil</span>
-      </a>
+        <label class="check-option">
+          <input type="checkbox" value="ingredients">
+          <span>Peu d'ingrédients</span>
+        </label>
 
-    </nav>
+        <label class="check-option">
+          <input type="checkbox" value="digeste">
+          <span>Facile à digérer</span>
+        </label>
 
-  </div>
+        <label class="check-option">
+          <input type="checkbox" value="avance">
+          <span>À préparer à l'avance</span>
+        </label>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         BOUTON
+    ========================== -->
+
+    <section class="search-section">
+
+      <button class="button button-main" id="trouverRepas">
+        ✨ TROUVER MON REPAS
+      </button>
+
+    </section>
+
+  </main>
+
+
+  <!-- NAVIGATION -->
+
+  <nav class="navbar">
+
+    <a href="Accueil.html" class="nav-item">
+      🏠
+      <span>Accueil</span>
+    </a>
+
+    <a href="MesEnvies.html" class="nav-item active">
+      🔍
+      <span>Envies</span>
+    </a>
+
+    <a href="Recette.html" class="nav-item">
+      🍽️
+      <span>Recettes</span>
+    </a>
+
+    <a href="Favoris.html" class="nav-item">
+      ⭐
+      <span>Favoris</span>
+    </a>
+
+    <a href="MonProfil.html" class="nav-item">
+      👤
+      <span>Profil</span>
+    </a>
+
+  </nav>
+
+</div>
+
+
+<script>
+
+let envieSelectionnee = "";
+let tempsSelectionne = "";
+
+
+/* =========================
+   CHOIX DE L'ENVIE
+========================= */
+
+document.querySelectorAll(".choice-card").forEach(card => {
+
+  card.addEventListener("click", function() {
+
+    document.querySelectorAll(".choice-card")
+      .forEach(c => c.classList.remove("selected"));
+
+    this.classList.add("selected");
+
+    envieSelectionnee = this.dataset.envie;
+
+  });
+
+});
+
+
+/* =========================
+   CHOIX DU TEMPS
+========================= */
+
+document.querySelectorAll(".time-card").forEach(card => {
+
+  card.addEventListener("click", function() {
+
+    document.querySelectorAll(".time-card")
+      .forEach(c => c.classList.remove("selected"));
+
+    this.classList.add("selected");
+
+    tempsSelectionne = this.dataset.temps;
+
+  });
+
+});
+
+
+/* =========================
+   TROUVER LE REPAS
+========================= */
+
+document.getElementById("trouverRepas")
+  .addEventListener("click", function() {
+
+    if (!envieSelectionnee) {
+
+      alert("Choisissez d'abord votre envie 😊");
+      return;
+
+    }
+
+    if (!tempsSelectionne) {
+
+      alert("Choisissez le temps dont vous disposez ⏱️");
+      return;
+
+    }
+
+
+    /* Récupération des préférences */
+
+    let preferences = [];
+
+    document.querySelectorAll(
+      '.check-option input:checked'
+    ).forEach(checkbox => {
+
+      preferences.push(checkbox.value);
+
+    });
+
+
+    /* Enregistrement des choix */
+
+    localStorage.setItem(
+      "envie",
+      envieSelectionnee
+    );
+
+    localStorage.setItem(
+      "temps",
+      tempsSelectionne
+    );
+
+    localStorage.setItem(
+      "preferences",
+      JSON.stringify(preferences)
+    );
+
+
+    /* Aller vers les recettes */
+
+    window.location.href = "Recette.html";
+
+  });
+
+</script>
 
 </body>
 </html>
 ```
+
