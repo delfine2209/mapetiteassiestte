@@ -21,7 +21,7 @@ async function afficherRecettes() {
 
             container.innerHTML += `
 
-                Recette.html?id=${recette.id}
+                <a href="Recette.html?id=${recette.id}" class="recipe-card">
 
                     <h3>${recette.nom}</h3>
 
@@ -89,7 +89,7 @@ async function afficherRecette() {
 
             <h1>${recette.nom}</h1>
 
-            <div class="card">
+            <div class="recipe-card">
 
                 <p>⏱ ${recette.temps} min</p>
 
@@ -123,67 +123,4 @@ async function afficherRecette() {
 
             <ul>
 
-                ${recette.envies
-                    .map(envie => `<li>${envie}</li>`)
-                    .join("")}
-
-            </ul>
-
-            <button
-                onclick="ajouterFavori('${recette.id}')">
-
-                ❤️ Ajouter aux favoris
-
-            </button>
-
-        `;
-
-    } catch (error) {
-
-        fiche.innerHTML =
-            "<p>Erreur de chargement.</p>";
-
-        console.error(error);
-
-    }
-
-}
-
-// =========================
-// FAVORIS
-// =========================
-
-function ajouterFavori(id) {
-
-    let favoris =
-        JSON.parse(
-            localStorage.getItem("favoris")
-        ) || [];
-
-    if (!favoris.includes(id)) {
-
-        favoris.push(id);
-
-    }
-
-    localStorage.setItem(
-        "favoris",
-        JSON.stringify(favoris)
-    );
-
-    alert("Recette ajoutée aux favoris ❤️");
-}
-
-// =========================
-// INITIALISATION
-// =========================
-
-document.addEventListener(
-    "DOMContentLoaded",
-    () => {
-
-        afficherRecettes();
-        afficherRecette();
-
-    }
-);
+       
