@@ -4,550 +4,551 @@
 
 <head>
 
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-  <title>Ma recette - Ma Petite Assiette</title>
+    <title>Ma Petite Assiette - Recette</title>
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
 
 </head>
+
 
 <body>
 
 <div class="screen">
 
-  <header class="page-header">
 
-    <h1>🍽️ Ma petite assiette</h1>
+    <!-- =========================
+         EN-TÊTE
+    ========================== -->
 
-    <p class="page-subtitle">
-      Une recette choisie selon vos envies
-    </p>
+    <header class="page-header">
 
-  </header>
+        <h1 id="nom-recette">
+            Ma recette
+        </h1>
+
+        <p class="page-subtitle">
+            Ma Petite Assiette
+        </p>
+
+    </header>
 
 
-  <main class="recette-content">
+    <!-- =========================
+         CONTENU
+    ========================== -->
 
-    <div id="recetteContainer">
-      <!-- La recette sera affichée ici -->
+    <main id="fiche-recette">
+
+        <p>
+            Chargement de la recette...
+        </p>
+
+    </main>
+
+
+    <!-- =========================
+         RETOUR AUX RÉSULTATS
+    ========================== -->
+
+    <div class="back-button">
+
+        <a
+            href="Resultats.html"
+            class="button">
+
+            ← Retour à mes recettes
+
+        </a>
+
     </div>
 
 
-    <button
-      class="button button-main"
-      id="autreRecette"
-    >
-      🔄 UNE AUTRE RECETTE
-    </button>
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="navbar">
+
+        <a
+            href="Accueil.html"
+            class="nav-item">
+
+            🏠
+            <span>Accueil</span>
+
+        </a>
 
 
-    <a
-      href="MesEnvies.html"
-      class="button button-secondary"
-    >
-      ← MODIFIER MES ENVIES
-    </a>
+        <a
+            href="MesEnvies.html"
+            class="nav-item">
 
-  </main>
+            🔍
+            <span>Envies</span>
+
+        </a>
 
 
-  <nav class="navbar">
+        <a
+            href="Recettes.html"
+            class="nav-item active">
 
-    <a href="Accueil.html" class="nav-item">
-      🏠
-      <span>Accueil</span>
-    </a>
+            🍽️
+            <span>Recettes</span>
 
-    <a href="MesEnvies.html" class="nav-item">
-      🔍
-      <span>Envies</span>
-    </a>
+        </a>
 
-    <a href="Recette.html" class="nav-item active">
-      🍽️
-      <span>Recettes</span>
-    </a>
 
-    <a href="Favoris.html" class="nav-item">
-      ⭐
-      <span>Favoris</span>
-    </a>
+        <a
+            href="Favoris.html"
+            class="nav-item">
 
-    <a href="MonProfil.html" class="nav-item">
-      👤
-      <span>Profil</span>
-    </a>
+            ⭐
+            <span>Favoris</span>
 
-  </nav>
+        </a>
+
+
+        <a
+            href="MonProfil.html"
+            class="nav-item">
+
+            👤
+            <span>Profil</span>
+
+        </a>
+
+    </nav>
+
 
 </div>
 
 
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
 <script>
 
-/* =====================================================
-   BASE DES RECETTES
-===================================================== */
-
-const recettes = [
-
-  {
-    nom: "Omelette légère aux courgettes",
-    emoji: "🥚",
-    envies: ["leger", "rapide", "vegetarien"],
-    temps: 10,
-    preferences: ["petite", "ingredients", "digeste"],
-
-    description:
-      "Une petite omelette moelleuse accompagnée de courgettes fondantes.",
-
-    ingredients: [
-      "1 œuf",
-      "½ petite courgette",
-      "1 cuillère à café d'huile d'olive",
-      "Herbes de Provence"
-    ],
-
-    preparation: [
-      "Couper la courgette en petits dés.",
-      "La faire revenir avec l'huile d'olive.",
-      "Battre l'œuf puis l'ajouter.",
-      "Cuire doucement jusqu'à obtenir une omelette moelleuse."
-    ]
-  },
-
-
-  {
-    nom: "Poulet crémeux aux courgettes",
-    emoji: "🍗",
-    envies: ["complet", "reconfort"],
-    temps: 20,
-    preferences: ["petite", "digeste"],
-
-    description:
-      "Un petit plat complet et fondant, avec du poulet et des courgettes.",
-
-    ingredients: [
-      "80 g de poulet",
-      "150 g de courgettes",
-      "1 cuillère à soupe de sauce légère",
-      "Herbes de Provence"
-    ],
-
-    preparation: [
-      "Couper le poulet en petits morceaux.",
-      "Faire revenir le poulet.",
-      "Ajouter les courgettes.",
-      "Ajouter la sauce légère.",
-      "Laisser mijoter quelques minutes."
-    ]
-  },
-
-
-  {
-    nom: "Tartine chaude tomate mozzarella",
-    emoji: "🥪",
-    envies: ["rapide", "vegetarien"],
-    temps: 10,
-    preferences: ["petite", "ingredients"],
-
-    description:
-      "Une petite tartine chaude, fondante et rapide à préparer.",
-
-    ingredients: [
-      "1 tranche de pain",
-      "½ tomate",
-      "30 g de mozzarella",
-      "Herbes de Provence"
-    ],
-
-    preparation: [
-      "Déposer la tomate sur le pain.",
-      "Ajouter la mozzarella.",
-      "Parsemer d'herbes.",
-      "Faire gratiner quelques minutes."
-    ]
-  },
-
-
-  {
-    nom: "Compote pomme cannelle et fromage blanc",
-    emoji: "🍎",
-    envies: ["sucre", "leger", "vegetarien"],
-    temps: 10,
-    preferences: ["petite", "digeste"],
-
-    description:
-      "Une petite douceur fruitée et légère.",
-
-    ingredients: [
-      "1 petite pomme",
-      "100 g de fromage blanc",
-      "Cannelle"
-    ],
-
-    preparation: [
-      "Éplucher et couper la pomme.",
-      "La faire cuire quelques minutes.",
-      "Ajouter la cannelle.",
-      "Servir avec le fromage blanc."
-    ]
-  },
-
-
-  {
-    nom: "Petites pâtes crémeuses aux légumes",
-    emoji: "🍝",
-    envies: ["complet", "reconfort", "vegetarien"],
-    temps: 20,
-    preferences: ["petite", "digeste"],
-
-    description:
-      "De petites pâtes crémeuses avec des légumes fondants.",
-
-    ingredients: [
-      "60 g de petites pâtes",
-      "½ courgette",
-      "30 g de fromage frais",
-      "1 cuillère à café d'huile d'olive"
-    ],
-
-    preparation: [
-      "Faire cuire les pâtes.",
-      "Faire revenir la courgette.",
-      "Ajouter le fromage frais.",
-      "Mélanger avec les pâtes."
-    ]
-  },
-
-
-  {
-    nom: "Petit gratin de courgettes",
-    emoji: "🥒",
-    envies: ["reconfort", "vegetarien", "leger"],
-    temps: 30,
-    preferences: ["petite", "avance", "digeste"],
-
-    description:
-      "Un petit gratin fondant et réconfortant, à préparer à l'avance.",
-
-    ingredients: [
-      "1 petite courgette",
-      "1 œuf",
-      "50 ml de lait",
-      "20 g de fromage râpé",
-      "Sel et poivre"
-    ],
-
-    preparation: [
-      "Couper la courgette en fines rondelles.",
-      "Mélanger l'œuf et le lait.",
-      "Disposer la courgette dans un petit plat.",
-      "Verser la préparation.",
-      "Ajouter le fromage et cuire au four."
-    ]
-  }
-
-];
-
-
-/* =====================================================
-   RÉCUPÉRATION DES CHOIX
-===================================================== */
-
-const envie =
-  localStorage.getItem("envie");
-
-const temps =
-  localStorage.getItem("temps");
-
-const preferences =
-  JSON.parse(
-    localStorage.getItem("preferences") || "[]"
-  );
-
-
-/* =====================================================
-   CALCUL DU SCORE
-===================================================== */
-
-function calculerScore(recette) {
-
-  let score = 0;
-
-
-  /* Correspondance avec l'envie */
-
-  if (recette.envies.includes(envie)) {
-
-    score += 10;
-
-  }
-
-
-  /* Correspondance avec le temps */
-
-  if (temps === "plus") {
-
-    score += 5;
-
-  } else {
-
-    const tempsChoisi = parseInt(temps);
-
-    if (recette.temps <= tempsChoisi) {
-
-      score += 8;
-
-    } else {
-
-      score -= 5;
-
-    }
-
-  }
-
-
-  /* Correspondance avec les préférences */
-
-  preferences.forEach(preference => {
-
-    if (
-      recette.preferences.includes(preference)
-    ) {
-
-      score += 3;
-
-    }
-
-  });
-
-
-  return score;
-
-}
-
-
-/* =====================================================
-   CHOISIR LA RECETTE
-===================================================== */
-
-function choisirRecette() {
-
-  const classement = recettes
-    .map(recette => {
-
-      return {
-        recette: recette,
-        score: calculerScore(recette)
-      };
-
-    })
-    .sort((a, b) => b.score - a.score);
-
-
-  return classement[0].recette;
-
-}
-
-
-/* =====================================================
-   AFFICHER LA RECETTE
-===================================================== */
-
-function afficherRecette() {
-
-  const recette = choisirRecette();
-
-  const container =
-    document.getElementById(
-      "recetteContainer"
-    );
-
-
-  container.innerHTML = `
-
-    <article class="recipe-card">
-
-      <div class="recipe-emoji">
-        ${recette.emoji}
-      </div>
-
-      <h2>
-        ${recette.nom}
-      </h2>
-
-      <p class="recipe-description">
-        ${recette.description}
-      </p>
-
-
-      <div class="recipe-info">
-
-        <span>
-          ⏱️ ${recette.temps} min
-        </span>
-
-        <span>
-          🍽️ Petite portion
-        </span>
-
-      </div>
-
-
-      <div class="recipe-block">
-
-        <h3>🛒 Ingrédients</h3>
-
-        <ul>
-
-          ${recette.ingredients
-            .map(
-              ingredient =>
-                `<li>${ingredient}</li>`
-            )
-            .join("")
-          }
-
-        </ul>
-
-      </div>
-
-
-      <div class="recipe-block">
-
-        <h3>👩‍🍳 Préparation</h3>
-
-        <ol>
-
-          ${recette.preparation
-            .map(
-              etape =>
-                `<li>${etape}</li>`
-            )
-            .join("")
-          }
-
-        </ol>
-
-      </div>
-
-
-      <button
-        class="favorite-button"
-        onclick="ajouterFavori('${recette.nom}')"
-      >
-        ⭐ AJOUTER AUX FAVORIS
-      </button>
-
-    </article>
-
-  `;
-
-}
-
-
-/* =====================================================
-   AUTRE RECETTE
-===================================================== */
-
-document
-  .getElementById("autreRecette")
-  .addEventListener(
-    "click",
+document.addEventListener(
+    "DOMContentLoaded",
     afficherRecette
-  );
+);
 
 
-/* =====================================================
-   FAVORIS
-===================================================== */
+async function afficherRecette() {
 
-function ajouterFavori(nom) {
+    const fiche =
+        document.getElementById("fiche-recette");
 
-  let favoris =
-    JSON.parse(
-      localStorage.getItem("favoris") || "[]"
-    );
+    const titre =
+        document.getElementById("nom-recette");
 
 
-  if (!favoris.includes(nom)) {
+    /*
+     * Récupération de l'ID
+     */
 
-    favoris.push(nom);
+    const params =
+        new URLSearchParams(
+            window.location.search
+        );
 
-    localStorage.setItem(
-      "favoris",
-      JSON.stringify(favoris)
-    );
 
-    alert(
-      "⭐ Recette ajoutée à vos favoris !"
-    );
+    const id =
+        params.get("id");
 
-  } else {
 
-    alert(
-      "Cette recette est déjà dans vos favoris."
-    );
+    /*
+     * Vérification
+     */
 
-  }
+    if (!id) {
+
+        fiche.innerHTML = `
+
+            <div class="no-results">
+
+                <h2>
+                    😕 Recette introuvable
+                </h2>
+
+                <p>
+                    Aucune recette n'a été sélectionnée.
+                </p>
+
+                <a
+                    href="Recettes.html"
+                    class="button">
+
+                    Voir les recettes
+
+                </a>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    /*
+     * Chargement du fichier JSON
+     */
+
+    try {
+
+        const response =
+            await fetch("../recettes.json");
+
+
+        if (!response.ok) {
+
+            throw new Error(
+                "Impossible de charger les recettes."
+            );
+
+        }
+
+
+        const recettes =
+            await response.json();
+
+
+        /*
+         * Recherche de la recette
+         */
+
+        const recette =
+            recettes.find(
+                r => r.id === id
+            );
+
+
+        /*
+         * Recette inexistante
+         */
+
+        if (!recette) {
+
+            titre.textContent =
+                "Recette introuvable";
+
+
+            fiche.innerHTML = `
+
+                <div class="no-results">
+
+                    <h2>
+                        😕 Cette recette n'existe pas
+                    </h2>
+
+                    <p>
+                        L'identifiant ${id}
+                        ne correspond à aucune recette.
+                    </p>
+
+                    <a
+                        href="Recettes.html"
+                        class="button">
+
+                        Voir les recettes
+
+                    </a>
+
+                </div>
+
+            `;
+
+            return;
+
+        }
+
+
+        /*
+         * Titre
+         */
+
+        titre.textContent =
+            recette.nom;
+
+
+        /*
+         * Construction des caractéristiques
+         */
+
+        let caracteristiques = "";
+
+
+        if (recette.petitAppetit) {
+
+            caracteristiques += `
+                <span class="tag">
+                    🥄 Petite portion
+                </span>
+            `;
+
+        }
+
+
+        if (recette.preOperatoire) {
+
+            caracteristiques += `
+                <span class="tag">
+                    🩺 Pré-opératoire
+                </span>
+            `;
+
+        }
+
+
+        if (recette.postOperatoire) {
+
+            caracteristiques += `
+                <span class="tag">
+                    🩺 Post-opératoire
+                </span>
+            `;
+
+        }
+
+
+        if (recette.vegetarien) {
+
+            caracteristiques += `
+                <span class="tag">
+                    🌱 Végétarien
+                </span>
+            `;
+
+        }
+
+
+        if (recette.vegetalien) {
+
+            caracteristiques += `
+                <span class="tag">
+                    🌱 Végétalien
+                </span>
+            `;
+
+        }
+
+
+        if (recette.sansGluten) {
+
+            caracteristiques += `
+                <span class="tag">
+                    🌾 Sans gluten
+                </span>
+            `;
+
+        }
+
+
+        if (recette.sansLactose) {
+
+            caracteristiques += `
+                <span class="tag">
+                    🥛 Sans lactose
+                </span>
+            `;
+
+        }
+
+
+        /*
+         * Affichage de la fiche
+         */
+
+        fiche.innerHTML = `
+
+            <section class="recipe-detail">
+
+
+                <div class="recipe-detail-icon">
+                    🍽️
+                </div>
+
+
+                <h2>
+                    ${recette.nom}
+                </h2>
+
+
+                <p class="recipe-category">
+                    ${recette.categorie}
+                </p>
+
+
+                <div class="recipe-infos">
+
+
+                    <div class="recipe-info">
+
+                        <span>
+                            ⏱️
+                        </span>
+
+                        <strong>
+                            ${recette.temps} min
+                        </strong>
+
+                        <small>
+                            Temps
+                        </small>
+
+                    </div>
+
+
+                    <div class="recipe-info">
+
+                        <span>
+                            🥩
+                        </span>
+
+                        <strong>
+                            ${recette.proteines} g
+                        </strong>
+
+                        <small>
+                            Protéines
+                        </small>
+
+                    </div>
+
+
+                    <div class="recipe-info">
+
+                        <span>
+                            🍴
+                        </span>
+
+                        <strong>
+                            ${recette.texture}
+                        </strong>
+
+                        <small>
+                            Texture
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+                <section class="recipe-tags">
+
+                    <h3>
+                        Cette recette vous correspond
+                    </h3>
+
+                    <div class="tags">
+
+                        ${caracteristiques}
+
+                    </div>
+
+                </section>
+
+
+                <section class="recipe-actions">
+
+                    <button
+                        class="button button-main"
+                        onclick="ajouterFavori('${recette.id}')">
+
+                        ❤️ Ajouter aux favoris
+
+                    </button>
+
+                </section>
+
+
+            </section>
+
+        `;
+
+    }
+
+    catch (error) {
+
+        console.error(error);
+
+
+        fiche.innerHTML = `
+
+            <div class="no-results">
+
+                <h2>
+                    ⚠️ Une erreur est survenue
+                </h2>
+
+                <p>
+                    Impossible de charger cette recette.
+                </p>
+
+            </div>
+
+        `;
+
+    }
 
 }
 
 
-/* =====================================================
-   VÉRIFICATION
-===================================================== */
 
-if (!envie || !temps) {
+/* =========================
+   FAVORIS
+========================= */
 
-  document.getElementById(
-    "recetteContainer"
-  ).innerHTML = `
+function ajouterFavori(id) {
 
-    <div class="no-recipe">
+    let favoris =
+        JSON.parse(
+            localStorage.getItem("favoris")
+        ) || [];
 
-      <div class="no-recipe-icon">
-        🍽️
-      </div>
 
-      <h2>
-        Choisissez d'abord vos envies
-      </h2>
+    if (!favoris.includes(id)) {
 
-      <p>
-        Dites-nous ce qui vous ferait plaisir
-        et nous vous proposerons une petite
-        assiette adaptée.
-      </p>
+        favoris.push(id);
 
-      <a
-        href="MesEnvies.html"
-        class="button button-main"
-      >
-        CHOISIR MES ENVIES
-      </a>
+        localStorage.setItem(
+            "favoris",
+            JSON.stringify(favoris)
+        );
 
-    </div>
+        alert(
+            "❤️ Recette ajoutée à vos favoris !"
+        );
 
-  `;
+    }
 
-} else {
+    else {
 
-  afficherRecette();
+        alert(
+            "Cette recette est déjà dans vos favoris ❤️"
+        );
+
+    }
 
 }
 
 </script>
 
+
 </body>
 
 </html>
 ```
->
+
